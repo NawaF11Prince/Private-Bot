@@ -1,4 +1,4 @@
-   //By N4waF
+//By N4waF
 //جميع الحقوق محفوضة
 const Discord = require('discord.js');
 const Rocket = new Discord.Client();
@@ -382,7 +382,7 @@ Rocket.on('message', message => {//help msg
   ❖${prefix}** quran 4 ** ==>**القرآن الكريم كامل بصوت الشيخ المعيقلي**
   ❖${prefix}** qstop ** ==>**لـ أيقاف تشغيل البوت**
 
-  By : Platinum TeaM | __**شكرا لكم لاستعمال البوت**__
+  By :  Buyers Bot   | __**شكرا لكم لاستعمال البوت**__
 
 
   `);
@@ -1179,6 +1179,16 @@ Rocket.on('message', msg => {
 
 
         });
+
+
+
+ 
+
+
+
+
+
+
 
 
 
