@@ -1,12 +1,13 @@
-//By N4waF
+//By Fares
 //جميع الحقوق محفوضة
 const Discord = require('discord.js');
 const Rocket = new Discord.Client();
+const jimp = require("jimp");// npm i jimp
 const package = ('package.json');
 const yt = require('ytdl-core');
 const prefix = (".")
 const child_process = require("child_process");
-const ownerid = ('440481882799603717 ')
+const ownerid = ('280749272498962432')
 const canvas = require("canvas");
 const fs = require('fs')
 const moment = require("moment");
@@ -49,7 +50,7 @@ message.channel.send({embed:embed});
 });
 Rocket.on('ready', () => { //playing
     Rocket.user.setGame(`.help | Servers : ${Rocket.guilds.size}	`,'https://www.twitch.tv/faresgameryt');
-    Rocket.user.setStatus('Idle')
+    Rocket.user.setStatus('Online')
 });
 Rocket.on('message',function(message) {
     let toKick = message.mentions.users.first();
@@ -382,7 +383,7 @@ Rocket.on('message', message => {//help msg
   ❖${prefix}** quran 4 ** ==>**القرآن الكريم كامل بصوت الشيخ المعيقلي**
   ❖${prefix}** qstop ** ==>**لـ أيقاف تشغيل البوت**
 
-  By : N4waF | __**شكرا لكم لاستعمال البوت**__
+  By : Platinum TeaM | __**شكرا لكم لاستعمال البوت**__
 
 
   `);
@@ -398,7 +399,17 @@ Rocket.on('message', message => {//help
   message.channel.send('**تم الارسال لك في الخاص | :ballot_box_with_check:**')
     }
 });
-
+Rocket.on('message', message => {//invite
+     if (message.content === ".invite") {
+     let embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setTitle("Click Here to invite Platinum")
+.setAuthor("Platinum", "https://discordapp.com/channels/350923773140271115/469576599696834560")
+.setTimestamp()
+.setURL("https://discordapp.com/api/oauth2/authorize?client_id=344127240935571457&permissions=8&scope=bot")
+  message.author.sendEmbed(embed);
+    }
+});
 
 var cats = [//cat
 
@@ -724,8 +735,32 @@ msg.edit(`تم الانتهاء من الامر ${message.guild.members.size}`);
 }
 });
 
+Rocket.on('message', message => {//id
+    if(message.content == ('.user')) {
 
-    
+             if (message.channel.type === 'dm') return message.reply('هذا الامر فقط للسيرفرات :x:');
+            var Canvas = module.require('canvas');
+            var jimp = module.require('jimp');
+
+     const w = ['./img/ID1.png','./img/ID2.png','./img/ID3.png','./img/ID4.png','./img/ID5.png'];
+
+             let Image = Canvas.Image,
+                 canvas = new Canvas(802, 404),
+                 ctx = canvas.getContext('2d');
+             ctx.patternQuality = 'bilinear';
+             ctx.filter = 'bilinear';
+             ctx.antialias = 'subpixel';
+             ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+             ctx.shadowOffsetY = 2;
+             ctx.shadowBlur = 2;
+             fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+                 if (err) return console.log(err);
+                 let BG = Canvas.Image;
+                 let ground = new Image;
+                 ground.src = Background;
+                 ctx.drawImage(ground, 0, 0, 802, 404);
+
+     })
                                 let user = message.mentions.users.first();
           var men = message.mentions.users.first();
              var heg;
@@ -1159,6 +1194,8 @@ Rocket.on('message', msg => {
 
 
     Rocket.login(process.env.BOT_TOKEN);
+
+
 
 
 
