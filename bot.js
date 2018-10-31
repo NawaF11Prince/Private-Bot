@@ -2,7 +2,6 @@
 //جميع الحقوق محفوضة
 const Discord = require('discord.js');
 const Rocket = new Discord.Client();
-const jimp = require("jimp");// npm i jimp
 const package = ('package.json');
 const yt = require('ytdl-core');
 const prefix = (".")
@@ -1159,8 +1158,7 @@ Rocket.on('message', msg => {
 
 
 
-client.login(process.env.BOT_TOKEN);
-
+    Rocket.login(process.env.BOT_TOKEN);
 
 
 
