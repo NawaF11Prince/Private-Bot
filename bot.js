@@ -364,6 +364,7 @@ Rocket.on('message', message => {//help msg
   ❖${prefix}** user ** ==>**لمعلومات عنك**
   ❖${prefix}** ping ** ==>**للتحقق من سرعة الاتصال**
   ❖${prefix}** bot ** ==>**معلومات عن البوت**
+  ❖${prefix}** invite ** ==>**لاحضار البوت الى سيرفرك**
   ❖${prefix}** time ** ==>**لرؤية الوقت**
   ❖${prefix}** color ** ==>**لتغيير لونك**
   ❖${prefix}** roles ** ==>**لكي ترى كل رتب السيرفر**
@@ -398,7 +399,17 @@ Rocket.on('message', message => {//help
   message.channel.send('**تم الارسال لك في الخاص | :ballot_box_with_check:**')
     }
 });
-
+Rocket.on('message', message => {//invite
+     if (message.content === ".invite") {
+     let embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setTitle("Click Here to invite Platinum")
+.setAuthor("Platinum", "https://discordapp.com/channels/350923773140271115/469576599696834560")
+.setTimestamp()
+.setURL("https://discordapp.com/api/oauth2/authorize?client_id=344127240935571457&permissions=8&scope=bot")
+  message.author.sendEmbed(embed);
+    }
+});
 
 var cats = [//cat
 
@@ -1178,14 +1189,9 @@ Rocket.on('message', msg => {
 
 
 
-    
-
-
-    Rocket.login(process.env.BOT_TOKEN);
+        });
 
 
 
 
-
-
-
+client.login(process.env.BOT_TOKEN);
