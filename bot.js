@@ -1193,4 +1193,9 @@ Rocket.on('message', msg => {
 
 
 
-client.login(process.env.BOT_TOKEN);
+
+
+
+
+
+   Rocket.login(process.env.BOT_TOKEN);
