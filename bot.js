@@ -1,4 +1,4 @@
-//By Fares
+   //By N4waF
 //جميع الحقوق محفوضة
 const Discord = require('discord.js');
 const Rocket = new Discord.Client();
@@ -106,7 +106,7 @@ Rocket.on('message', message => { //bc
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
     if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "Rocket Bot";
+    let copy = "Buyers Bot";
     let request = `Requested By ${message.author.username}`;
     if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
     msg.react('✅')
@@ -364,7 +364,6 @@ Rocket.on('message', message => {//help msg
   ❖${prefix}** user ** ==>**لمعلومات عنك**
   ❖${prefix}** ping ** ==>**للتحقق من سرعة الاتصال**
   ❖${prefix}** bot ** ==>**معلومات عن البوت**
-  ❖${prefix}** invite ** ==>**لاحضار البوت الى سيرفرك**
   ❖${prefix}** time ** ==>**لرؤية الوقت**
   ❖${prefix}** color ** ==>**لتغيير لونك**
   ❖${prefix}** roles ** ==>**لكي ترى كل رتب السيرفر**
@@ -399,17 +398,7 @@ Rocket.on('message', message => {//help
   message.channel.send('**تم الارسال لك في الخاص | :ballot_box_with_check:**')
     }
 });
-Rocket.on('message', message => {//invite
-     if (message.content === ".invite") {
-     let embed = new Discord.RichEmbed()
-.setColor("RANDOM")
-.setTitle("Click Here to invite Platinum")
-.setAuthor("Platinum", "https://discordapp.com/channels/350923773140271115/469576599696834560")
-.setTimestamp()
-.setURL("https://discordapp.com/api/oauth2/authorize?client_id=344127240935571457&permissions=8&scope=bot")
-  message.author.sendEmbed(embed);
-    }
-});
+
 
 var cats = [//cat
 
@@ -851,7 +840,7 @@ Rocket.on('message', message => {//id
 
                                  ctx.beginPath();
                                  ctx.stroke();
-                               message.channel.sendFile(canvas.toBuffer());
+                               message.channel.sendFile(.toBuffer());
 
 
 
@@ -1190,6 +1179,18 @@ Rocket.on('message', msg => {
 
 
         });
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
