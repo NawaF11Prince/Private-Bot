@@ -13,7 +13,7 @@ const fs = require('fs')
 const moment = require("moment");
 
 
-console.log("By Fares");
+console.log("By N4waF");
 
 Rocket.on('ready', () => {//source
     console.log('╔[════════════════════════════════════]╗');
@@ -49,7 +49,7 @@ message.channel.send({embed:embed});
 }
 });
 Rocket.on('ready', () => { //playing
-    Rocket.user.setGame(`.help | Servers : ${Rocket.guilds.size}	`,'https://www.twitch.tv/faresgameryt');
+    Rocket.user.setGame(`.help | Servers : ${Rocket.guilds.size}	`,'https://www.twitch.tv/N4waFgameryt');
     Rocket.user.setStatus('Online')
 });
 Rocket.on('message',function(message) {
@@ -382,7 +382,7 @@ Rocket.on('message', message => {//help msg
   ❖${prefix}** quran 4 ** ==>**القرآن الكريم كامل بصوت الشيخ المعيقلي**
   ❖${prefix}** qstop ** ==>**لـ أيقاف تشغيل البوت**
 
-  By :  Buyers Bot   | __**شكرا لكم لاستعمال البوت**__
+  By : Buyers Bot | __**شكرا لكم لاستعمال البوت**__
 
 
   `);
@@ -618,7 +618,7 @@ Rocket.user.setAvatar(argresult);
   message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
       } else
 if (message.content.startsWith(adminprefix + 'setT')) {
-  Rocket.user.setGame(argresult, "https://www.twitch.tv/faresgameryt");
+  Rocket.user.setGame(argresult, "https://www.twitch.tv/N4waFgameryt");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 
@@ -840,7 +840,7 @@ Rocket.on('message', message => {//id
 
                                  ctx.beginPath();
                                  ctx.stroke();
-                               message.channel.sendFile(.toBuffer());
+                               message.channel.sendFile(canvas.toBuffer());
 
 
 
@@ -1178,30 +1178,7 @@ Rocket.on('message', msg => {
 
 
 
-        });
-
-
-
- 
-
-
-
-
-
-
-
-
-
     
-
-
-
-
-
-
-
-
-
 
 
     Rocket.login(process.env.BOT_TOKEN);
